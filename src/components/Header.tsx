@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, Plus, Zap, Eye, Settings, AlertCircle } from 'lucide-react';
 import { cn } from '@/utils';
 

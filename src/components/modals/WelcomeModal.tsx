@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sparkles, Plus, Zap, Eye, AlertCircle, Key } from 'lucide-react';
 import { cn } from '@/utils';
 

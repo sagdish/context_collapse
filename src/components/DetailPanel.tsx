@@ -1,4 +1,3 @@
-import React from 'react';
 import { Trash2, Sparkles } from 'lucide-react';
 import { formatDate, truncateText, cn } from '@/utils';
 import type { Node, Connection } from '@/types';
