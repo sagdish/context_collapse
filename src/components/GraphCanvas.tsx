@@ -198,11 +198,16 @@ export function GraphCanvas({
         type="button"
         onClick={resetView}
         className={cn(
-          'absolute bottom-4 right-4 rounded-full px-3 py-2 text-xs font-semibold shadow-lg border transition-colors',
+          'absolute bottom-4 right-4 rounded-full px-2 py-1.5 text-[11px] font-semibold shadow-lg border transition-colors',
           isDark ? 'bg-indigo-600 border-indigo-500 text-white hover:bg-indigo-500' : 'bg-indigo-500 border-indigo-400 text-white hover:bg-indigo-600'
         )}
       >
-        Reset view
+        <span className="block sm:hidden leading-tight text-[8px]">
+          Reset
+          <br />
+          View
+        </span>
+        <span className="hidden sm:inline">Reset view</span>
       </button>
 
       {/* Graph Controls */}

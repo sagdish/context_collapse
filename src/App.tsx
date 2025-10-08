@@ -124,27 +124,29 @@ function App() {
         isMockMode={isMockMode}
       />
       <main className="px-4 lg:px-8 pb-8">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
-          <section className="flex-[3] basis-0 min-w-0 min-h-[70vh] h-full">
-            <GraphCanvas
-              nodes={graph.nodes}
-              connections={graph.connections}
-              filteredConnections={filteredConnections}
-              selectedNode={selectedNode}
-              searchQuery={searchQuery}
-              filterStrength={filterStrength}
-              onFilterStrengthChange={setFilterStrength}
-              onNodeSelect={setSelectedNode}
-              onNodePositionUpdate={updateNodePosition}
-              actualTheme={actualTheme}
-              isProcessing={uiState.isProcessing}
-            />
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-stretch gap-6 lg:gap-8">
+          <section className="flex-[3] basis-0 min-w-0 min-h-[70vh] h-full lg:flex-none lg:basis-[57%] lg:min-h-[calc(100vh-200px)] lg:flex lg:flex-col">
+            <div className="flex-1">
+              <GraphCanvas
+                nodes={graph.nodes}
+                connections={graph.connections}
+                filteredConnections={filteredConnections}
+                selectedNode={selectedNode}
+                searchQuery={searchQuery}
+                filterStrength={filterStrength}
+                onFilterStrengthChange={setFilterStrength}
+                onNodeSelect={setSelectedNode}
+                onNodePositionUpdate={updateNodePosition}
+                actualTheme={actualTheme}
+                isProcessing={uiState.isProcessing}
+              />
+            </div>
           </section>
 
-          <aside className="flex-[1] basis-0 min-w-0 w-full lg:max-w-sm">
+          <aside className="flex-[1] basis-0 min-w-0 w-full lg:flex-none lg:basis-[43%] lg:max-w-none lg:min-h-[calc(100vh-200px)] flex">
             <div
               className={cn(
-                'rounded-xl border-2 shadow-lg h-full min-h-[280px]',
+                'rounded-xl border-2 shadow-lg h-full min-h-[280px] flex-1 flex flex-col',
                 actualTheme === 'dark' ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
               )}
             >
